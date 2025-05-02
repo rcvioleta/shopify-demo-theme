@@ -134,11 +134,32 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "promotion_group_LTJArP": {
+      "type": "promotion-group",
+      "blocks": {
+        "heading_qFXx4k": {
+          "type": "heading",
+          "settings": {
+            "text": "Promo #1",
+            "image": "shopify://shop_images/shellfish-pasta-pizza-and-italian-food.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qFXx4k"
+      ],
+      "name": "Promotions Group",
+      "settings": {
+        "title": "Promotion 1",
+        "text_alignment": "center"
+      }
     }
   },
   "order": [
     "rich_text_gGJr6n",
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "promotion_group_LTJArP"
   ]
 }
