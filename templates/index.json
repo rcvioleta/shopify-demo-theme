@@ -144,10 +144,18 @@
             "text": "Promo #1",
             "image": "shopify://shop_images/shellfish-pasta-pizza-and-italian-food.jpg"
           }
+        },
+        "heading_eYnaAk": {
+          "type": "heading",
+          "settings": {
+            "text": "Promo #2",
+            "image": "shopify://shop_images/iced-latte-at-coffee-shop-window.jpg"
+          }
         }
       },
       "block_order": [
-        "heading_qFXx4k"
+        "heading_qFXx4k",
+        "heading_eYnaAk"
       ],
       "name": "Promotions Group",
       "settings": {
