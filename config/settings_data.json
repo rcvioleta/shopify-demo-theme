@@ -145,7 +145,7 @@
           "heading_tNmcEh": {
             "type": "heading",
             "settings": {
-              "heading": "This is a heading",
+              "heading": "Predefined liquid template title",
               "heading_size": "h1"
             }
           }
