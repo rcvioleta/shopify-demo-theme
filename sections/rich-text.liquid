@@ -1,3 +1,7 @@
+{% comment %} Find filter {% endcomment %}
+{% assign heading_block = section.blocks | find: 'type', 'heading' %}
+{{ heading_block.settings.heading }}
+
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}

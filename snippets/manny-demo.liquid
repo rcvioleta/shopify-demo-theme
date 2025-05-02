@@ -1,0 +1,106 @@
+{% comment %} 
+  -> Allows you to have a block of Liquid without delimeters on each tag.
+  {% liquid
+    expression
+    expression
+    expression
+  %} 
+{% endcomment %}
+
+{% comment %} {%- assign path = 'snippets/manny-demo.liquid' -%}
+
+<h1>Hello from {{ path -}}</h1> {% endcomment %}
+
+{% comment %} 
+| This is a server-side comment
+{% endcomment %}
+
+<!-- This is a client-side comment- -->
+
+{% comment %} Arrays {% endcomment %}
+{% comment %} {%- assign tags = 'Snowboard, Board, Ice' | split: ', ' -%}
+{%- for tag in tags -%}
+  <p>{{- tag -}}</p>
+{%- endfor -%} {% endcomment %}
+
+{% comment %} Capture: render html with vars {% endcomment %}
+{% comment %} {%- capture html -%}
+  <p>Hello from {{ page_title -}}</p>
+{%- endcapture -%}
+
+{{- html -}} {% endcomment %}
+
+{% comment %} Array: contains {% endcomment %}
+{% comment %} {%- if tags contains 'Ice' -%}
+  <p>The tags contains 'ice'</p>
+{%- endif -%} {% endcomment %}
+
+{% comment %} Negation (!): unless {% endcomment %}
+{% comment %} {% unless tags contains 'Psuede' %}
+  <p>There are Psuede here!</p>
+{% endunless %} {% endcomment %}
+
+{% comment %} {% assign n = 10 %}
+{% unless n <= 10 %}
+  <p>N is equal to 10</p>
+{% else %}
+  <p>N is not equal to 10</p>
+{% endunless %} {% endcomment %}
+
+{% comment %}
+  Operator precedence: right to left
+    if product.title == 'Snowboard' or page.type == 'snowboard' and product.price < 6500
+      * if product.title == 'Snowboard' or page.type == 'snowboard' and false
+      * if product.title == 'Snowboard' or true and false
+      * true and false
+      * condition = false
+{% endcomment %}
+
+{% comment %} Switch/Case {% endcomment %}
+{% comment %} {% case page_title %}
+{% when 'test' %}
+  <p>This is a test page</p>
+{% when 'manny-store-04292025' %}
+  <p>This is manny dion's page!</p>
+{% else %}
+  <p>This is an A/B test page</p>
+{% endcase %}  {% endcomment %}
+
+{% comment %} {% for tag in tags %} 
+  {% assign diff = forloop.index | modulo: 2 %}
+  {% assign style = '' %}
+
+  {% if diff == 0 %} 
+    {% assign style = 'color: green;' %}
+  {% endif %}
+
+  <p style="{{- style -}}">
+    Index: {{ forloop.index }} | Tag: {{ tag }}
+  </p>
+{% endfor %} {% endcomment %}
+
+{% comment %}
+  for loop notes:
+    * you can add an else block to conditionally do something else if there's nothing to loop
+    * limited to 50 iterations per page.
+    * use paginate tag to iterate over an array that has > 50 items.
+{% endcomment %}
+
+{% comment %} 
+  filters (|) or pipes: transform any value to a different value
+{% endcomment %}
+
+{% comment %} {% assign num = 5 %} {% endcomment %}
+{% comment %} {% assign new_num = num | plus: 5 %} {% endcomment %}
+{% comment %} {% assign new_num = num | minus: 5 %} {% endcomment %}
+{% comment %} {% assign new_num = num | times: 5 %} {% endcomment %}
+{% comment %} {% assign new_num = num | divided_by: 5 %} {% endcomment %}
+
+{% comment %} JSON Filter {% endcomment %}
+{% comment %} {{ collections.first | json }} {% endcomment %}
+
+
+{% comment %} Loading assets {% endcomment %}
+{{ 'manny-demo.css' | asset_url | stylesheet_tag }} 
+<p>{{ 'This text has more than one text' | highlight: 'text' }}</p>
+
