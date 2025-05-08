@@ -167,7 +167,7 @@
       "type": "sections-demo",
       "name": "Sections Demo",
       "settings": {
-        "title": "",
+        "title": "Sections Demo Title",
         "richtext": "<p>Hello, this is a <strong>Richtext</strong>!</p><ul><li>list item 1</li><li>list item 2</li><li>list item 3</li></ul><p>This is an <span style=\"text-decoration:underline\">underline</span>.</p>"
       }
     }
