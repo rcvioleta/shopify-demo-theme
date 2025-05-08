@@ -162,12 +162,21 @@
         "title": "Promotion 1",
         "text_alignment": "center"
       }
+    },
+    "sections_demo_bXPiMj": {
+      "type": "sections-demo",
+      "name": "Sections Demo",
+      "settings": {
+        "title": "",
+        "richtext": "<p>Hello, this is a <strong>Richtext</strong>!</p><ul><li>list item 1</li><li>list item 2</li><li>list item 3</li></ul><p>This is an <span style=\"text-decoration:underline\">underline</span>.</p>"
+      }
     }
   },
   "order": [
     "rich_text_gGJr6n",
     "image_banner",
     "featured_collection",
-    "promotion_group_LTJArP"
+    "promotion_group_LTJArP",
+    "sections_demo_bXPiMj"
   ]
 }
