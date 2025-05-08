@@ -1,0 +1,29 @@
+<div>{{ section.settings.richtext }}</div>
+
+{% schema %}
+{
+  "name": "Sections Demo",
+  "tag": "section",
+  "class": "sections-demo",
+  "limit": 2,
+  "settings": [
+    {
+      "id": "title", // Usage: section.settings.title
+      "type": "text", 
+      "label": "Title"
+    },
+    {
+      "id": "richtext",
+      "type": "richtext",
+      "label": "Richtext"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Sections Demo",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
