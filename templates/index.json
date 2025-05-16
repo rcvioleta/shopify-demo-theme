@@ -168,7 +168,8 @@
       "name": "Sections Demo",
       "settings": {
         "title": "Sections Demo Title",
-        "richtext": "<p>Hello, this is a <strong>Richtext</strong>!</p><ul><li>list item 1</li><li>list item 2</li><li>list item 3</li></ul><p>This is an <span style=\"text-decoration:underline\">underline</span>.</p>"
+        "richtext": "<p>Hello, this is a <strong>Richtext</strong>!</p><ul><li>list item 1</li><li>list item 2</li><li>list item 3</li></ul><p>This is an <span style=\"text-decoration:underline\">underline</span>.</p>",
+        "product_setting": "short-sleeve-t-shirt"
       }
     }
   },
