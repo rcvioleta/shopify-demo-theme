@@ -1,6 +1,8 @@
 <h2>{{ section.settings.title }}</h2>
 <div>{{ section.settings.richtext }}</div>
 
+<p>{{ section.settings.product_setting }} | {{ section.settings.product_setting.title }} - {{ section.settings.product_setting.variants | json }}</p>
+
 {% schema %}
 {
   "name": "Sections Demo",
@@ -17,6 +19,11 @@
       "id": "richtext",
       "type": "richtext",
       "label": "Richtext"
+    },
+    {
+      "id": "product_setting",
+      "type": "product",
+      "label": "Product Setting"
     }
   ],
   "blocks": [],
