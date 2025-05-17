@@ -9,6 +9,10 @@
   </p>
 </div>
 
+<div>
+  {{ section.settings.inline_richtext }}
+</div>
+
 {% schema %}
 {
   "name": "Sections Demo",
@@ -25,6 +29,11 @@
       "id": "richtext",
       "type": "richtext",
       "label": "Richtext"
+    },
+    {
+      "id": "inline_richtext",
+      "type": "inline_richtext",
+      "label": "Inline Richtext"
     },
     {
       "id": "product_setting",
