@@ -18,7 +18,7 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome from github!",
-            "link": ""
+            "link": "shopify://products/short-sleeve-t-shirt"
           }
         }
       },
