@@ -1,6 +1,17 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
+{% style %}
+  .announcement-bar__message {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .announcement-bar__link:hover {
+    text-decoration: none !important;
+  }
+{% endstyle %}
+
 {%- liquid
   assign social_icons = true
   if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -52,20 +63,20 @@
           {%- endif -%}
         {% endcomment %}
 
-        {%- if section.blocks.announcement.settings.inline_richtext != blank -%}
-          {%- if section.blocks.announcement.settings.link != blank -%}
+        {%- if section.blocks.first.settings.inline_richtext != blank -%}
+          {%- if section.blocks.first.settings.link != blank -%}
             <a
-              href="{{ section.blocks.announcement.settings.link }}"
+              href="{{ section.blocks.first.settings.link }}"
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
           <p class="announcement-bar__message h5">
-            <span>{{ section.blocks.announcement.settings.inline_richtext | escape }}</span>
-            {%- if section.blocks.announcement.settings.link != blank -%}
+            <span>{{ section.blocks.first.settings.inline_richtext }}</span>
+            {%- if section.blocks.first.settings.link != blank -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
           </p>
-          {%- if section.blocks.announcement.settings.link != blank -%}
+          {%- if section.blocks.first.settings.link != blank -%}
             </a>
           {%- endif -%}
         {%- endif -%}
