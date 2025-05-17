@@ -17,7 +17,8 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome from github!",
+            "text": "",
+            "inline_richtext": "20% OFF Sale: <span style=\"text-decoration:underline\">ENDS TODAY</span>",
             "link": "shopify://products/short-sleeve-t-shirt"
           }
         }
