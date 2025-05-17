@@ -169,6 +169,7 @@
       "settings": {
         "title": "Sections Demo Title",
         "richtext": "<p>Hello, this is a <strong>Richtext</strong>!</p><ul><li>list item 1</li><li>list item 2</li><li>list item 3</li></ul><p>This is an <span style=\"text-decoration:underline\">underline</span>.</p>",
+        "inline_richtext": "20% OFF Sale: <a href=\"https://manny-store-04292025.myshopify.com/products/short-sleeve-t-shirt\" title=\"https://manny-store-04292025.myshopify.com/products/short-sleeve-t-shirt\"><span style=\"text-decoration:underline\">ENDS TODAY</span></a>",
         "product_setting": "short-sleeve-t-shirt"
       }
     }
