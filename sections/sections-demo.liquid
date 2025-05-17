@@ -1,7 +1,13 @@
 <h2>{{ section.settings.title }}</h2>
 <div>{{ section.settings.richtext }}</div>
 
-<p>{{ section.settings.product_setting }} | {{ section.settings.product_setting.title }} - {{ section.settings.product_setting.variants | json }}</p>
+<div>
+  {{ section.settings.product_setting.featured_image | image_url: width: 500, height: 500 | image_tag }}
+  <p>
+    {{ section.settings.product_setting }} | {{ section.settings.product_setting.title }} -
+    {{ section.settings.product_setting.variants[0].price | money }}
+  </p>
+</div>
 
 {% schema %}
 {
@@ -12,7 +18,7 @@
   "settings": [
     {
       "id": "title", // Usage: section.settings.title
-      "type": "text", 
+      "type": "text",
       "label": "Title"
     },
     {
