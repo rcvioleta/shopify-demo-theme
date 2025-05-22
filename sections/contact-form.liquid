@@ -6,6 +6,10 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .contact .field:focus-within .field__label {
+    display: block;
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -29,6 +33,12 @@
         assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
       endif
     -%}
+
+    <p style="margin: 0 0 15px 0;">
+      If you have any questions or concerns please submit the contact form below and we will get back to you within 24
+      hours:
+    </p>
+
     {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
@@ -133,8 +143,6 @@
       </div>
     {%- endform -%}
   </div>
-
-  <h1>Test:  {{ 'templates.contact.form.post_success' | t }}</h1>
 </div>
 
 {% schema %}
